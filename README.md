@@ -21,17 +21,24 @@ References:
 
 ## Examples
 
-Suppose you have a text file `input.txt` that contains one NNS Number per line, and some may be valid or invalid:
+Suppose you have a text file `input.txt` that contains one NNS Number per line,
+and some may be valid or invalid:
 
 ```txt
 999 123 4560
 999 123 4561
 ```
 
-You can parse each line and validate it:
+If you use Linux or macOS, then here's how to parse each line and validate it:
 
 ```sh
 cat input.txt | nhs-number-cli
+```
+
+If you use Windows, then here's how to parse each line and validate it:
+
+```sh
+type input.txt | nhs-number-cli.exe
 ```
 
 The commmand prints the valid NHS Number to stdout:
@@ -45,3 +52,17 @@ The commmand prints the invalid NHS Number to stderr:
 ```stderr
 Error invalid line 1. Error: validate check digit failed. NHS Number: 999 123 4561
 ```
+
+## Releases
+
+You can build a release for your own platform:
+
+```sh
+cargo build --release
+```
+
+You can download a prebuilt release for Windows:
+
+* Windows with GNU: <target/x86_64-pc-windows-gnu/release/nhs-number-cli.exe>
+
+We aim to add more prebuilt releases soon.
