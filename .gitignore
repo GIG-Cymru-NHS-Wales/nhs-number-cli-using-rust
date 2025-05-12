@@ -1,1 +1,4 @@
-/target
+/target/**
+!/target/**/
+
+!/target/x86_64-pc-windows-gnu/release/nhs-number-cli.exe
