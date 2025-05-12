@@ -21,7 +21,9 @@
 //! 
 //! ## Examples
 //! 
-//! Suppose you have a text file `input.txt`:
+//! Suppose you have a text file `input.txt` that contains one NNS Number per line,
+//! and some may be valid or invalid:
+//!
 //! 
 //! ```txt
 //! 999 123 4560

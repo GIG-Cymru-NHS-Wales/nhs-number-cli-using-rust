@@ -1,4 +1,4 @@
-# NHS Number command line interface (cli)
+# NHS Number command line interface
 
 A National Health Service (NHS) Number is a unique number allocated in a shared
 numbering scheme to registered users of the three public health services in
@@ -21,7 +21,7 @@ References:
 
 ## Examples
 
-Suppose you have a text file `input.txt`:
+Suppose you have a text file `input.txt` that contains one NNS Number per line, and some may be valid or invalid:
 
 ```txt
 999 123 4560
@@ -34,11 +34,13 @@ You can parse each line and validate it:
 cat input.txt | nhs-number-cli
 ```
 
-The output is one stdout line and one stderr line:
+The commmand prints the valid NHS Number to stdout:
 
 ```stdout
 999 123 4560
 ```
+
+The commmand prints the invalid NHS Number to stderr:
 
 ```stderr
 Error invalid line 1. Error: validate check digit failed. NHS Number: 999 123 4561
